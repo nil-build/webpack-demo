@@ -147,7 +147,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/about.js","vendors~about~app"]);
+/******/ 	deferredModules.push(["./src/about.js","common~about~app~product","vendors~about~app","common~about~app"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -163,6 +163,8 @@
 
 var message = __webpack_require__(/*! ./lib/message */ "./src/lib/message.js")
 var min = __webpack_require__(/*! ./lib/min */ "./src/lib/min.js")
+var min = __webpack_require__(/*! ./vendor/lodash */ "./src/vendor/lodash/lodash.js")
+var react = __webpack_require__(/*! ./vendor/react-dom */ "./src/vendor/react-dom/index.js")
 message();
 
 /***/ }),

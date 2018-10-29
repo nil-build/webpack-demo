@@ -6,6 +6,7 @@ module.exports = {
     devtool: "sourcemap",
     entry: {
         app: './src/index.js',
+        product: './src/product.js',
         about: './src/about.js'
     },
     output: {
@@ -15,16 +16,36 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'app.html',
-            excludeChunks: ['about']
+            excludeChunks: ['about', 'product']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'product.html',
+            excludeChunks: ['about', 'app']
         }),
         new HtmlWebpackPlugin({
             filename: 'about.html',
-            excludeChunks: ['app']
+            excludeChunks: ['app', 'product']
         })
     ],
     optimization: {
         splitChunks: {
-            chunks: 'all'
+            chunks: 'all',
+            cacheGroups: {
+                vendors: {
+                    test: /[\\/]node_modules[\\/]/,
+                    priority: -10
+                },
+                common: {
+                    test: /[\\/]vendor[\\/]/,
+                    priority: -10
+                },
+                default: false
+                // {
+                //     minChunks: 2,
+                //     priority: -20,
+                //     reuseExistingChunk: true
+                // }
+            }
         }
     }
 };

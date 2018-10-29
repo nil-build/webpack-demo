@@ -147,7 +147,7 @@
 /******/
 /******/
 /******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/index.js","vendors~about~app"]);
+/******/ 	deferredModules.push(["./src/index.js","common~about~app~product","vendors~about~app","common~about~app","vendors~app~product","common~app~product"]);
 /******/ 	// run deferred modules when ready
 /******/ 	return checkDeferredModules();
 /******/ })
@@ -163,8 +163,11 @@
 
 var sum = __webpack_require__(/*! ./lib/sum */ "./src/lib/sum.js")
 var max = __webpack_require__(/*! ./lib/max */ "./src/lib/max.js")
+var min = __webpack_require__(/*! ./vendor/lodash */ "./src/vendor/lodash/lodash.js")
 var min = __webpack_require__(/*! ./lib/min */ "./src/lib/min.js")
-
+var react = __webpack_require__(/*! ./vendor/react-dom */ "./src/vendor/react-dom/index.js")
+__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")
+var jquery = __webpack_require__(/*! ./vendor/jquery/dist/jquery */ "./src/vendor/jquery/dist/jquery.js")
 sum();
 max();
 min();
