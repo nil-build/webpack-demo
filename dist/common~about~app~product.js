@@ -17112,4 +17112,4 @@
 /***/ })
 
 }]);
-//# sourceMappingURL=common~about~app~product.bundle.js.map
+//# sourceMappingURL=common~about~app~product.js.map

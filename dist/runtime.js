@@ -56,7 +56,7 @@
 /******/ 	// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 	// Promise = chunk loading, 0 = chunk loaded
 /******/ 	var installedChunks = {
-/******/ 		"app": 0
+/******/ 		"runtime": 0
 /******/ 	};
 /******/
 /******/ 	var deferredModules = [];
@@ -146,79 +146,9 @@
 /******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
 /******/
-/******/ 	// add entry module to deferred list
-/******/ 	deferredModules.push(["./src/index.js","common~about~app~product","vendors~about~app","common~about~app","vendors~app~product","common~app~product"]);
-/******/ 	// run deferred modules when ready
-/******/ 	return checkDeferredModules();
+/******/ 	// run deferred modules from other chunks
+/******/ 	checkDeferredModules();
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var sum = __webpack_require__(/*! ./lib/sum */ "./src/lib/sum.js")
-var max = __webpack_require__(/*! ./lib/max */ "./src/lib/max.js")
-var min = __webpack_require__(/*! ./vendor/lodash */ "./src/vendor/lodash/lodash.js")
-var min = __webpack_require__(/*! ./lib/min */ "./src/lib/min.js")
-var react = __webpack_require__(/*! ./vendor/react-dom */ "./src/vendor/react-dom/index.js")
-__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")
-var jquery = __webpack_require__(/*! ./vendor/jquery/dist/jquery */ "./src/vendor/jquery/dist/jquery.js")
-sum();
-max();
-min();
-
-/***/ }),
-
-/***/ "./src/lib/max.js":
-/*!************************!*\
-  !*** ./src/lib/max.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var warning = __webpack_require__(/*! warning */ "./node_modules/warning/warning.js");
-var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-
-module.exports = function () {
-    warning('max');
-}
-
-/***/ }),
-
-/***/ "./src/lib/min.js":
-/*!************************!*\
-  !*** ./src/lib/min.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var warning = __webpack_require__(/*! warning */ "./node_modules/warning/warning.js");
-
-module.exports = function () {
-    warning('min');
-}
-
-/***/ }),
-
-/***/ "./src/lib/sum.js":
-/*!************************!*\
-  !*** ./src/lib/sum.js ***!
-  \************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var warning = __webpack_require__(/*! warning */ "./node_modules/warning/warning.js");
-
-module.exports = function () {
-    warning('sum');
-}
-
-/***/ })
-
-/******/ });
-//# sourceMappingURL=app.bundle.js.map
+/******/ ([]);
+//# sourceMappingURL=runtime.js.map

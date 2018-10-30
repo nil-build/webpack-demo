@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/news.js","webpack:///./src/style/product.css?81a0"],"names":[],"mappings":";;;;;;;;;;AAAA;AAAA;AAAA;AAA4B;;AAE5B,mBAAO,CAAC,oDAAQ;;;;;;;;;;;;ACFhB,uC","file":"news.js","sourcesContent":["import \"./style/product.css\"\r\n\r\nrequire('jquery')\r\n","// extracted by mini-css-extract-plugin"],"sourceRoot":""}

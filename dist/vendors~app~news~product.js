@@ -1,9 +1,9 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["common~app~product"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["vendors~app~news~product"],{
 
-/***/ "./src/vendor/jquery/dist/jquery.js":
-/*!******************************************!*\
-  !*** ./src/vendor/jquery/dist/jquery.js ***!
-  \******************************************/
+/***/ "./node_modules/jquery/dist/jquery.js":
+/*!********************************************!*\
+  !*** ./node_modules/jquery/dist/jquery.js ***!
+  \********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10377,4 +10377,4 @@ return jQuery;
 /***/ })
 
 }]);
-//# sourceMappingURL=common~app~product.bundle.js.map
+//# sourceMappingURL=vendors~app~news~product.js.map
